@@ -9,11 +9,11 @@ export class ConfigService {
     const isDevelopmentEnv = process.env.NODE_ENV !== 'production';
 
     if (isDevelopmentEnv) {
-      const envFilePath = path.resolve(__dirname, '..', '..', '.env');
+      const envFilePath = path.resolve('.env');
       const existsPath = fs.existsSync(envFilePath);
 
       if (!existsPath) {
-        console.log('.env file does not exist');
+        console.log(envFilePath, '.env file does not exist');
         process.exit(0);
       }
 

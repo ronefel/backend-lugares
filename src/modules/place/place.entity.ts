@@ -4,10 +4,12 @@ import {
   CreateDateColumn,
   Entity,
   PrimaryGeneratedColumn,
+  Unique,
   UpdateDateColumn,
 } from 'typeorm';
 
 @Entity('places')
+@Unique('UQ_CountryPlace', ['country', 'place'])
 export class Place extends BaseEntity {
   @PrimaryGeneratedColumn('increment')
   id: number;
@@ -15,7 +17,7 @@ export class Place extends BaseEntity {
   @Column({ type: 'varchar', length: 100, nullable: false })
   country: string;
 
-  @Column({ type: 'varchar', unique: true, nullable: false })
+  @Column({ type: 'varchar', nullable: false })
   place: string;
 
   @Column({ type: 'integer', nullable: false })
