@@ -11,6 +11,6 @@ async function bootstrap() {
     }),
   );
 
-  await app.listen(AppModule.port, AppModule.host);
+  await app.listen(AppModule.port);
 }
 bootstrap();

@@ -1,6 +1,5 @@
 export enum Configuration {
-  HOST = 'HOST',
-  PORT = 'PORT',
+  API_PORT = 'API_PORT',
 
   DB_TYPE = 'DB_TYPE',
   DB_PORT = 'DB_PORT',
